@@ -13,7 +13,7 @@ document.getElementById('addFlavor').addEventListener('click', function () {
             <option value="Cheese Button">Cheese Button</option>
             <option value="Fun Cookies">Fun Cookies</option>
             <option value="Cornflakes Cranberry">Cornflakes Cranberry</option>
-            <option value="Black Snowball">Cornflakes Cranberry</option>
+            <option value="Black Snowball">Black Snowball</option>
             <option value="Kaastengel Premium">Kaastengel Premium</option>
             <option value="Semprit">Semprit</option>
         </select>
