@@ -11,7 +11,14 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    overflow: hidden; /* Prevent unwanted scrolling */
     flex-direction: column;
+}
+
+/* Ensure the entire page is scrollable if content exceeds screen height */
+html, body {
+    height: 100%;
+    overflow: auto;
 }
 
 /* Header section */
@@ -19,45 +26,42 @@ header {
     background-color: #f8c56d; /* Cookie dough yellow */
     color: #5c3f29; /* Chocolate brown */
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     width: 100%;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 header h1 {
-    font-size: 3em; /* Increase size for visibility */
+    font-size: 2.5em; /* Adjust for better visibility */
     margin: 0;
     font-weight: 700;
-    color: #5c3f29; /* Chocolate brown */
-    text-align: center;
 }
 
 header p {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #5c3f29;
+    font-size: 1.2em;
 }
 
-/* Form container */
+/* Form container centered with proper height */
 .form-container {
     background-color: #ffffff;
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 800px;
-    margin-top: 20px;
+    width: 90%;
+    max-width: 600px; /* More balanced for laptop screens */
+    max-height: 90%; /* Prevent form from overflowing */
+    overflow-y: auto; /* Add scrolling if needed */
+    margin: 20px 0;
 }
 
 /* Form heading */
 h2 {
     color: #d98c4d; /* A sweet, cookie-like orange */
-    font-size: 2.4em;
+    font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
 }
-
 
 /* Labels and input fields */
 label {
@@ -79,184 +83,56 @@ select {
     border-radius: 8px;
     border: 1px solid #ddd;
     background-color: #f4f4f4;
-    transition: 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="radio"]:focus,
-select:focus {
-    border-color: #d98c4d;
-    outline: none;
-    background-color: #f9f9f9;
 }
 
 /* Buttons styling */
 button {
     background-color: #d98c4d; /* Cookie dough color */
     color: white;
-    padding: 14px;
+    padding: 12px;
     border-radius: 8px;
     width: 100%;
     font-size: 1.2em;
     cursor: pointer;
     border: none;
     transition: 0.3s ease;
-    margin-bottom: 20px; /* Added gap between buttons */
+}
+
+/* Add more breathing room between buttons */
+button:not(:last-child) {
+    margin-bottom: 15px;
 }
 
 button:hover {
     background-color: #c77c3a; /* Darker shade */
 }
 
-button:active {
-    background-color: #9e6530;
-}
-
 /* Flavors section */
-#flavors-section {
-    margin-bottom: 30px;
-}
-
 .flavor-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.flavor-wrapper select,
-.flavor-wrapper input {
-    width: 48%;
-    padding: 12px;
-    font-size: 1.1em;
-}
-
-.flavor-wrapper button {
-    background-color: #f44336; /* Red for remove button */
-    padding: 12px;
-    font-size: 1.1em;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    width: 20%;
-}
-
-.flavor-wrapper button:hover {
-    background-color: #e11b2a;
-}
-
-/* Success and error messages */
-#successMessage {
-    color: green;
-    font-size: 1.3em;
-    text-align: center;
-    margin-top: 10px;
-}
-
-#errorMessage {
-    color: red;
-    font-size: 1.3em;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* Order confirmation section */
-#orderSection {
-    text-align: center;
-    background-color: #f1f1f1;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    width: 100%;
-    max-width: 700px;
-    margin-top: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#orderSection a {
-    color: #2b87f0;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Go back button styling */
-#goBack {
-    background-color: #4CAF50; /* Green for go back button */
-    margin-top: 20px;
-    width: 100%;
-    padding: 14px;
-    font-size: 1.2em;
-    border-radius: 8px;
-    transition: 0.3s ease;
-}
-
-#goBack:hover {
-    background-color: #45a049;
-}
-
-#goBack:active {
-    background-color: #388e3c;
-}
-
-.radio-group {
-  display: flex;
-  flex-direction: row; /* Align the label and radio buttons in a single row */
-  align-items: flex-start; /* Align to the top of the radio buttons */
-  margin-top: 10px;
-  gap: 20px; /* Space between label and options */
-}
-
-.radio-option {
-  display: flex;
-  align-items: center;
-  gap: 5px; /* Space between the radio button and the label */
+    margin-bottom: 15px;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.4em;
-    }
-
-    header p {
-        font-size: 1.1em;
-    }
-
-    .form-container {
-        padding: 25px;
-    }
-
-    h2 {
         font-size: 2em;
     }
 
-    button {
-        font-size: 1.1em;
+    .form-container {
+        padding: 20px;
+        width: 90%;
     }
 
     .flavor-wrapper {
         flex-direction: column;
-        align-items: stretch;
+        gap: 10px;
     }
 
     .flavor-wrapper select,
-    .flavor-wrapper input {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
+    .flavor-wrapper input,
     .flavor-wrapper button {
         width: 100%;
     }
-}
-
-/* Animation for form fade-in */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.form-container {
-    animation: fadeIn 1s ease-in;
 }
