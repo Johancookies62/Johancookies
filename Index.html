@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johan Cookies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Johan Cookies</h1>
+    <p>Delicious homemade cookies for every occasion!</p>
+</header>
+
+<div class="form-container" id="orderFormContainer">
+    <h2>Place Your Order</h2>
+    <form id="orderForm">
+        <label for="date">Order Date</label>
+        <input type="text" id="date" name="date" readonly>
+
+        <label for="name">Customer Name</label>
+       <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
+      
+      <label for="address">Address</label>
+      <input type="text" id="address" name="address" placeholder="Enter Your Address" required>
+
+           
+        <label for="flavors">Select Cookie Flavors</label>
+        <div id="flavors-section"></div>
+        <button type="button" id="addFlavor">Add Flavor</button>
+
+  <label for="stickerOption">Do you want a sticker?</label>
+<div class="radio-group">
+  <div class="radio-option">
+    <input type="radio" id="stickerYes" name="stickerOption" value="Yes">
+    <label for="stickerYes">Yes</label>
+  </div>
+  <div class="radio-option">
+    <input type="radio" id="stickerNo" name="stickerOption" value="No" checked>
+    <label for="stickerNo">No</label>
+  </div>
+</div>
+      
+        <button type="submit">Place Order</button>
+        <p id="errorMessage" class="error"></p>
+        <p id="successMessage" class="success"></p>
+    </form>
+</div>
+
+<div id="orderSection" class="order-section" style="display: none;">
+    <h2>Thank you for your order!</h2>
+    <p>Your order has been placed successfully. Please contact us to provide proof of payment:</p>
+    <p>WhatsApp: <a href="https://wa.me/1234567890" target="_blank">081310686862</a></p>
+    <p>We'll process your order as soon as we receive the payment confirmation.</p>
+    <button id="goBack">Go Back to Order Another</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
