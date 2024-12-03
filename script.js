@@ -17,7 +17,7 @@ document.getElementById('addFlavor').addEventListener('click', function () {
             <option value="Kaastengel Premium">Kaastengel Premium</option>
             <option value="Semprit">Semprit</option>
         </select>
-        <input type="number" name="quantity" min="1" max="250" required placeholder="Quantity" />
+        <input type="number" name="quantity" min="1" max="500" required placeholder="Quantity" />
         <button type="button" onclick="this.parentElement.remove()">Remove</button>
     `;
     flavorsSection.appendChild(flavorWrapper);
