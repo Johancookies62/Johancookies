@@ -225,40 +225,64 @@ button:active {
 }
 
 /* Mobile Responsiveness */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+    /* Adjust header text */
     header h1 {
-        font-size: 2.4em;
+        font-size: 2em; /* Smaller font size for smaller screens */
     }
 
     header p {
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
 
+    /* Reduce padding for mobile screens */
     .form-container {
-        padding: 25px;
+        padding: 20px;
     }
 
     h2 {
-        font-size: 2em;
+        font-size: 1.8em; /* Smaller form heading */
     }
 
+    /* Adjust input fields and button size */
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    select,
     button {
-        font-size: 1.1em;
+        font-size: 1em;
+        padding: 10px;
     }
 
+    /* Go Back button for mobile */
+    #goBack {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    /* Adjust flavor section layout */
     .flavor-wrapper {
-        flex-direction: column;
+        flex-direction: column; /* Stack the select and input vertically */
         align-items: stretch;
     }
 
     .flavor-wrapper select,
-    .flavor-wrapper input {
-        width: 100%;
-        margin-bottom: 10px;
+    .flavor-wrapper input,
+    .flavor-wrapper button {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 10px; /* Space between stacked elements */
     }
 
-    .flavor-wrapper button {
-        width: 100%;
+    /* Reduce padding and spacing in order confirmation */
+    #orderSection {
+        padding: 20px;
+    }
+
+    /* Adjust radio button group alignment */
+    .radio-group {
+        flex-direction: column; /* Stack radio buttons vertically */
+        gap: 10px; /* Smaller gap between options */
     }
 }
 
