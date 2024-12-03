@@ -20,8 +20,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure full screen height */
-    padding: 20px; /* Prevents layout from hitting screen edges */
+    width: 80vw; /* Width is 80% of the viewport width */
+    height: auto; /* Height adjusts automatically to maintain aspect ratio */
+    max-width: 600px; /* Optional: Limit the maximum width */
+    max-height: 742px; /* Optional: Limit the maximum height */
+}
     
 /* Header section */
 header {
