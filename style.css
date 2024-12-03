@@ -1,8 +1,8 @@
-/* General styling for body */
+/* Ensure body takes up full height and centers content */
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('https://www.transparenttextures.com/patterns/coffee.png'); /* Subtle pattern */
-    background-color: #f8f0e3; /* Light beige for a warm, cookie-like feel */
+    background-image: url('https://www.transparenttextures.com/patterns/coffee.png');
+    background-color: #f8f0e3;
     background-size: cover;
     color: #333;
     display: flex;
@@ -11,128 +11,26 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent unwanted scrolling */
     flex-direction: column;
 }
 
-/* Ensure the entire page is scrollable if content exceeds screen height */
-html, body {
-    height: 100%;
-    overflow: auto;
-}
-
-/* Header section */
-header {
-    background-color: #f8c56d; /* Cookie dough yellow */
-    color: #5c3f29; /* Chocolate brown */
+/* Order confirmation section */
+#orderSection {
     text-align: center;
-    padding: 20px;
-    width: 100%;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 30px;
-}
-
-header h1 {
-    font-size: 2.5em; /* Adjust for better visibility */
-    margin: 0;
-    font-weight: 700;
-}
-
-header p {
-    font-size: 1.2em;
-}
-
-/* Form container centered with proper height */
-.form-container {
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 600px; /* More balanced for laptop screens */
-    max-height: 90%; /* Prevent form from overflowing */
-    overflow-y: auto; /* Add scrolling if needed */
-    margin: 20px 0;
-}
-
-/* Form heading */
-h2 {
-    color: #d98c4d; /* A sweet, cookie-like orange */
-    font-size: 2em;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* Labels and input fields */
-label {
-    display: block;
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="tel"],
-input[type="radio"],
-select {
-    width: 100%;
-    padding: 12px;
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    border-radius: 8px;
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 10px;
     border: 1px solid #ddd;
-    background-color: #f4f4f4;
-}
-
-/* Buttons styling */
-button {
-    background-color: #d98c4d; /* Cookie dough color */
-    color: white;
-    padding: 12px;
-    border-radius: 8px;
     width: 100%;
-    font-size: 1.2em;
-    cursor: pointer;
-    border: none;
-    transition: 0.3s ease;
+    max-width: 700px;
+    margin: auto; /* Center it within the parent */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Add more breathing room between buttons */
-button:not(:last-child) {
-    margin-bottom: 15px;
-}
-
-button:hover {
-    background-color: #c77c3a; /* Darker shade */
-}
-
-/* Flavors section */
-.flavor-wrapper {
+/* Center and keep content inside page on various screen sizes */
+.form-container, #orderSection {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    .form-container {
-        padding: 20px;
-        width: 90%;
-    }
-
-    .flavor-wrapper {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .flavor-wrapper select,
-    .flavor-wrapper input,
-    .flavor-wrapper button {
-        width: 100%;
-    }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
