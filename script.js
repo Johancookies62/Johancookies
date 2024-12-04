@@ -60,8 +60,7 @@ document.getElementById('orderForm').addEventListener('submit', function (e) {
     }
   
     // Send the data to Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbzX4a4Aool5227NW_rG5Vw3aUpWNFbERr5XVoKCJvmtK5Kw4Up2MQ5DagoZneLuJht-/exec', {
-        method: 'POST',
+    fetch('https://script.google.com/macros/s/AKfycbyqAj1XyHBzP5cI-E3-e7_6K7L-UGpPTG-553PMXQt8TwMZw3fZBKiqILuUv9offAGw/exec: 'POST',
         body: formData
     })
     .then(response => response.json())
